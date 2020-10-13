@@ -35,12 +35,12 @@ public class SolutionTest {
 
     @Test public void testStringWithSeveralWords() {
         Solution solution = new Solution();
-        assertEquals("test  test  test", solution.shrink_space("test  test  test"));
+        assertEquals("test test test", solution.shrink_space("test  test  test"));
     }
 
     @Test public void testStringWithSpacesAtTheEnd() {
         Solution solution = new Solution();
-        assertEquals("test", solution.shrink_space("test     "));
+        assertEquals("test ", solution.shrink_space("test     "));
     }
 
     @Test public void testStringWithOnlySpaces() {

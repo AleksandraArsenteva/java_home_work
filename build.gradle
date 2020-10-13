@@ -6,6 +6,15 @@
  * User Manual available at https://docs.gradle.org/6.3/userguide/tutorial_java_projects.html
  */
 
+buildscript {
+    ext {
+        kotlin_version = '1.4.0'
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
 plugins {
     // Apply the java plugin to add support for Java
     id 'java'
@@ -28,16 +37,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
 }
 
-buildscript {
-    ext {
-        kotlin_version = '1.4.0'
-    }
-    dependencies {
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
-    }
-}
-
 application {
     // Define the main class for the application.
-    mainClassName = 'java_homework.App'
+    mainClassName = 'java_homework.Solution'
 }

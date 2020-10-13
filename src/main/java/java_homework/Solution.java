@@ -18,7 +18,7 @@ public class Solution {
 
     public static String shrink_space(String input) {
         String result = "";
-        for(int i=0; i < input.length(); i++) {
+        for(int i=0; i < input.length()-1; i++) {
             if ((input.charAt(i) == ' ')&&(input.charAt(i+1) == ' ')){
                 continue;
             }
@@ -26,6 +26,8 @@ public class Solution {
                 result += input.charAt(i);
             }
         }
+        if (input.length() - 1 >= 0)
+            result += input.charAt(input.length()-1);
         return result;
     }
 }
